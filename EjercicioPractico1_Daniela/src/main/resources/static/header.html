@@ -1,0 +1,24 @@
+<!-- header.html -->
+<header>
+    <h1>Farmacia Saludable</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="categoria.html">Categorías</a>
+        <a href="contactos.html">Contacto</a>
+    </nav>
+</header>
+
+<!-- footer.html -->
+<footer>
+    <p>&copy; 2025 Farmacia Saludable. Todos los derechos reservados.</p>
+</footer>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+    
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+});
